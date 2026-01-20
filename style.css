@@ -1,0 +1,260 @@
+/* :root {
+    --primary: #6366f1;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+    --accent: #22c55e;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    color: var(--text);
+}
+
+.todo-container {
+    background: var(--card);
+    width: 90%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Scoreboard Styling */
+/* .scoreboard {
+    display: flex;
+    justify-content: space-around;
+    background: #f1f5f9;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-box span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.stat-box p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #64748b;
+}
+
+/* Input Area */
+/* .input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+}
+
+#add-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+} */
+
+/* List Items */
+/* .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #f1f5f9;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.todo-item.completed {
+    opacity: 0.6;
+    background: #f8fafc;
+}
+
+.todo-item.completed span {
+    text-decoration: line-through;
+}
+
+.delete-btn {
+    background: #fee2e2;
+    color: #ef4444;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}  */
+  :root {
+    /* Brand Colors */
+    --primary: #4f46e5;          /* Indigo */
+    --primary-soft: #eef2ff;
+    --accent: #14b8a6;           /* Teal */
+    --danger: #ef4444;
+
+    /* Neutral Palette */
+    --bg: #f9fafb;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted-text: #64748b;
+    --border: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f9fafb, #eef2ff);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    color: var(--text);
+}
+
+/* Main Container */
+.todo-container {
+    background: var(--card);
+    width: 90%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.15);
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(135deg, var(--primary-soft), #ecfeff);
+    padding: 1rem;
+    border-radius: 14px;
+    margin-bottom: 1.5rem;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-box span {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-box p {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted-text);
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    outline: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+#todo-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Add Button */
+#add-btn {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    border: none;
+    padding: 0 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: 0.3s;
+    box-shadow: 0 8px 15px rgba(20, 184, 166, 0.35);
+}
+
+#add-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Todo List Item */
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.todo-item:hover {
+    border-color: var(--primary);
+    background: #f8fafc;
+}
+
+/* Completed Todo */
+.todo-item.completed {
+    background: #f1f5f9;
+    opacity: 0.75;
+}
+
+.todo-item.completed span {
+    text-decoration: line-through;
+    color: var(--muted-text);
+}
+
+/* Delete Button */
+.delete-btn {
+    background: #fff1f2;
+    color: var(--danger);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.delete-btn:hover {
+    background: var(--danger);
+    color: white;
+}
